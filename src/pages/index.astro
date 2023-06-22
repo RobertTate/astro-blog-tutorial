@@ -1,7 +1,10 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting.jsx";
+
+import GREETINGS from "../constants/greetings.js";
 ---
 
 <BaseLayout pageTitle="Home Page">
-  <h2>My awesome home page subtitle</h2>
+  <Greeting client:idle messages={GREETINGS} />
 </BaseLayout>
